@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -12,7 +12,7 @@ import { ErrorDialogComponent } from './../../shared/components/error-dialog/err
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss'],
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent{
   courses$: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
 
@@ -34,5 +34,4 @@ export class CoursesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
 }
